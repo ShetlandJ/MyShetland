@@ -28,10 +28,13 @@ export default class Menu extends Component {
       <React.Fragment>
 
         <View style={styles.menu}>
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
+          <MenuItem icon='🚗' text='Roads' />
+          <MenuItem icon='🗑' text='Litter & Rubbish' />
+          <MenuItem icon='💡' text='Streetlights' />
+          <MenuItem icon='📙' text='More Services' />
+          <MenuItem icon='🚢' text='Ferry timetables' />
+          <MenuItem icon='🚌' text='Bus timetables' />
+
         </View>
 
       </React.Fragment>
@@ -45,6 +48,7 @@ const styles = StyleSheet.create({
   menu: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     alignItems: 'flex-start',
   }
 
