@@ -25,28 +25,24 @@ export default class MenuItem extends Component {
     return (
       // <TouchableHighlight
       //   style={styles.container}
-      //   onPress={() => navigate('Roads').bind(this)}
       //   >
-      <View>
+      <View style={styles.container}>
         <Text style={styles.menuItemText}>{this.props.icon}</Text>
         <Text style={styles.menuItemText}>{this.props.text}</Text>
       </View>
-    // </TouchableHighlight>
+     // </TouchableHighlight>
     );
   }
 }
 
 
 const styles = StyleSheet.create({
-  // container: {
-  //   // flex: 1,
-  //   height: 125,
-  //   width: '40%',
-  //   // backgroundColor: 'red',
-  //   margin: 5,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  // },
+  container: {
+    height: 125,
+    // margin: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   menuItemText: {
     fontSize: 20
   }

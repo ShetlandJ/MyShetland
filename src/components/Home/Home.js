@@ -30,7 +30,7 @@ export class Home extends Component {
         <Header />
         <Menu
           navigation={this.props.navigation}
-         />
+        />
       </React.Fragment>
     );
   }
@@ -38,14 +38,28 @@ export class Home extends Component {
 
 const RootStack = createStackNavigator(
   {
-    Home: Home,
-    Roads: Roads,
-    Rubbish: Rubbish
-  },
-  {
-    initialRouteName: 'Home',
+    Home: {
+      screen: Home,
+      navigationOptions: {
+        header: null
+      }
+    },
+
+    Roads: {
+      screen: Roads,
+      navigationOptions: {
+        title: "Roads"
+      }
+    },
+    Rubbish: {
+      screen: Rubbish,
+      navigationOptions: {
+        title: "Litter & Rubbish"
+      }
+    },
   }
 );
+
 
 export default class App extends React.Component {
   render() {
