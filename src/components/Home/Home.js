@@ -1,8 +1,16 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import Header from './Header'
+import Header from './Header';
+import Roads from '../Roads/Home';
+import Rubbish from '../Rubbish/Home';
+
 import Menu from './Menu'
+
+// import { Button, View, Text } from 'react-native'
+
+
+import { createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 
 import StatusBar from '../Global/StatusBar'
 
@@ -11,17 +19,37 @@ import {
   View,
   Text,
   StyleSheet,
+  Button
 } from 'react-native';
 
-export default class Home extends Component {
+export class Home extends Component {
   render() {
     return (
       <React.Fragment>
         <StatusBar />
         <Header />
-        <Menu />
+        <Menu
+          navigation={this.props.navigation}
+         />
       </React.Fragment>
     );
+  }
+}
+
+const RootStack = createStackNavigator(
+  {
+    Home: Home,
+    Roads: Roads,
+    Rubbish: Rubbish
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
   }
 }
 

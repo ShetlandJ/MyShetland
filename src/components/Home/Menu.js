@@ -1,6 +1,7 @@
 import { Col, Row, Grid } from "react-native-easy-grid";
 import React, { Component } from 'react';
 import MenuItem from './MenuItem'
+import { TouchableHighlight } from 'react-native';
 
 
 import {
@@ -9,31 +10,59 @@ import {
   StyleSheet,
 } from 'react-native';
 
-var NUMBERS = [
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six"
-];
-
-
 export default class Menu extends Component {
 
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      msg: 'hello'
+    };
+  }
 
   render() {
+    const { navigate } = this.props.navigation;
+    console.log(this.props, "props is here");
+
     return (
       <React.Fragment>
 
         <View style={styles.menu}>
-          <MenuItem icon='🚗' text='Roads' />
-          <MenuItem icon='🗑' text='Litter & Rubbish' />
-          <MenuItem icon='💡' text='Streetlights' />
-          <MenuItem icon='📙' text='More Services' />
-          <MenuItem icon='🚢' text='Ferry timetables' />
-          <MenuItem icon='🚌' text='Bus timetables' />
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Roads')}>
+            <MenuItem icon='🚗' text='Roads' />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Rubbish')}>
+            <MenuItem icon='🗑' text='Litter & Rubbish' />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Roads')}>
+            <MenuItem icon='💡' text='Streetlights' />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Roads')}>
+            <MenuItem icon='📙' text='More Services' />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Roads')}>
+            <MenuItem icon='🚢' text='Ferry timetables' />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Roads')}>
+            <MenuItem icon='🚌' text='Bus timetables' />
+          </TouchableHighlight>
 
         </View>
 
@@ -50,7 +79,17 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'flex-start',
-  }
+  },
+  container: {
+    // flex: 1,
+    height: 125,
+    width: '40%',
+    // backgroundColor: 'red',
+    margin: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
 
 
 });
