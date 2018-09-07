@@ -72,7 +72,7 @@ export default class Menu extends Component {
 
           <TouchableHighlight
             style={styles.container}
-            onPress={() => navigate('Roads')}>
+            onPress={() => navigate('Map')}>
             <MenuItem name='cog' text='Settings' />
           </TouchableHighlight>
 
