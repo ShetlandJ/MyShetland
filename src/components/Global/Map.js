@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MapView from 'react-native-maps'
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
 import {
   View,
   Text,
@@ -11,13 +11,14 @@ export default class MapTemplate extends Component {
     return (
       <View style={styles.container}>
         <MapView style={styles.map}
-        region={{
-          latitude: 59.32,
-          longitude: 18.06,
-          latitudeDelta: 0.1,
-          longitudeDelta: 0.1,
-        }}
-      />
+          provider={PROVIDER_GOOGLE}
+          region={{
+            latitude: 59.32,
+            longitude: 18.06,
+            latitudeDelta: 0.1,
+            longitudeDelta: 0.1,
+          }}
+        />
       </View>
     );
   }

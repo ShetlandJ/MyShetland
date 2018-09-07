@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Roads from '../Roads/Home';
 import Rubbish from '../Rubbish/Home';
+import MapTemplate from '../Global/Map'
 
 import Menu from './Menu'
 
@@ -57,7 +58,15 @@ const RootStack = createStackNavigator(
         title: "Litter & Rubbish"
       }
     },
+
+    Map: {
+      screen: MapTemplate,
+      navigationOptions: {
+        title: "Litter & Rubbish"
+      }
+    },
   }
+
 );
 
 

@@ -11,9 +11,10 @@
     "@babel/preset-react": "^7.0.0",
     "babel-preset-expo": "^4.0.0",
     "react": "16.4.1",
-    "react-native": "0.56.0",
+    "react-native": "^0.56.0",
     "react-native-easy-grid": "^0.2.0",
     "react-native-fontawesome": "^5.7.0",
+    "react-native-maps": "^0.21.0",
     "react-native-square-grid": "^1.0.5",
     "react-native-vector-icons": "^5.0.0",
     "react-navigation": "git+https://github.com/react-community/react-navigation.git"
