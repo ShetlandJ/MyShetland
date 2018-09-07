@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TouchableHighlight } from 'react-native';
 import Roads from '../Roads/Home'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 
 import {
@@ -27,7 +28,7 @@ export default class MenuItem extends Component {
       //   style={styles.container}
       //   >
       <View style={styles.container}>
-        <Text style={styles.menuItemText}>{this.props.icon}</Text>
+        <FontAwesome5 name={this.props.name} />
         <Text style={styles.menuItemText}>{this.props.text}</Text>
       </View>
      // </TouchableHighlight>

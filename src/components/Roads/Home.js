@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Menu from './Menu'
 import {
   View,
   Text,
@@ -13,14 +14,8 @@ export default class Roads extends Component {
 
     return (
       <View style={styles.container}>
-        <Button
-          title="Go to Jane's profile"
-          onPress={() =>
-            navigate('Rubbish')
-          }
-        />
-
-        <Text>I'm the Roads component</Text>
+        <Menu />
+        {/* <Text>I'm the Roads component</Text> */}
       </View>
     );
   }
@@ -29,5 +24,6 @@ export default class Roads extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center'
   },
 });

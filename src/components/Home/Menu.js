@@ -31,25 +31,25 @@ export default class Menu extends Component {
           <TouchableHighlight
             style={styles.container}
             onPress={() => navigate('Roads')}>
-            <MenuItem icon='🚗' text='Roads' />
+            <MenuItem name='car' text='Roads' />
           </TouchableHighlight>
 
           <TouchableHighlight
             style={styles.container}
             onPress={() => navigate('Rubbish')}>
-            <MenuItem icon='🗑' text='Litter & Rubbish' />
+            <MenuItem name='trash' text='Litter & Rubbish' />
           </TouchableHighlight>
 
           <TouchableHighlight
             style={styles.container}
             onPress={() => navigate('Roads')}>
-            <MenuItem icon='💡' text='Streetlights' />
+            <MenuItem icon='lightbulb' text='Streetlights' />
           </TouchableHighlight>
 
           <TouchableHighlight
             style={styles.container}
             onPress={() => navigate('Roads')}>
-            <MenuItem icon='📙' text='More Services' />
+            <MenuItem icon='list-ul' text='More Services' />
           </TouchableHighlight>
 
           <TouchableHighlight
