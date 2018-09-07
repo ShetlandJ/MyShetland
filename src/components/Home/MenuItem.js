@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TouchableHighlight } from 'react-native';
 import Roads from '../Roads/Home'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import s from '../Global/style'
 
 
 import {
@@ -28,7 +29,11 @@ export default class MenuItem extends Component {
       //   style={styles.container}
       //   >
       <View style={styles.container}>
-        <FontAwesome5 name={this.props.name} />
+        <FontAwesome5
+          name={this.props.name}
+          size={30}
+          style={styles.icon}
+        />
         <Text style={styles.menuItemText}>{this.props.text}</Text>
       </View>
      // </TouchableHighlight>
@@ -45,6 +50,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   menuItemText: {
-    fontSize: 20
+    fontSize: 20,
+    color: s.colours.text
+  },
+  icon: {
+    color: s.colours.blue,
+    paddingBottom: 10
   }
 });

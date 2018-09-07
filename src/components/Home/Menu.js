@@ -42,26 +42,38 @@ export default class Menu extends Component {
 
           <TouchableHighlight
             style={styles.container}
-            onPress={() => navigate('Roads')}>
-            <MenuItem icon='lightbulb' text='Streetlights' />
+            onPress={() => navigate('Rubbish')}>
+            <MenuItem name='lightbulb' text='Streetlights' />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Rubbish')}>
+            <MenuItem name='list-ul' text='More services' />
           </TouchableHighlight>
 
           <TouchableHighlight
             style={styles.container}
             onPress={() => navigate('Roads')}>
-            <MenuItem icon='list-ul' text='More Services' />
+            <MenuItem name='ship' text='Ferry timetables' />
           </TouchableHighlight>
 
           <TouchableHighlight
             style={styles.container}
             onPress={() => navigate('Roads')}>
-            <MenuItem icon='🚢' text='Ferry timetables' />
+            <MenuItem name='bus' text='Bus timetables' />
           </TouchableHighlight>
 
           <TouchableHighlight
             style={styles.container}
             onPress={() => navigate('Roads')}>
-            <MenuItem icon='🚌' text='Bus timetables' />
+            <MenuItem name='users' text='My councillors' />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => navigate('Roads')}>
+            <MenuItem name='cog' text='Settings' />
           </TouchableHighlight>
 
         </View>
